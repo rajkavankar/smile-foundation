@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react"
 const menuItems = [
   {
     name: "About us",
-    href: "#",
+    href: "/aboutus",
   },
   {
     name: "Contact",
@@ -25,7 +25,7 @@ const HomeNav = () => {
   }
 
   return (
-    <div className='relative w-full bg-white shadow-md rounded-md'>
+    <div className='relative w-full bg-slate-50 shadow-md rounded-md'>
       <div className='mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8'>
         <div className='inline-flex items-center space-x-2'>
           <Link to='/'>
