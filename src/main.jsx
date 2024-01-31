@@ -9,10 +9,12 @@ import {
 } from "react-router-dom"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import "react-accessible-accordion/dist/fancy-example.css"
 import "./index.css"
 import HomePage from "./pages/HomePage.jsx"
 import AnnualReportPage from "./pages/AnnualReportPage.jsx"
 import AboutusPage from "./pages/AboutusPage.jsx"
+import ContactPage from "./pages/ContactPage.jsx"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +22,7 @@ const router = createBrowserRouter(
       <Route index={true} path='/' element={<HomePage />} />
       <Route path='/annual-report' element={<AnnualReportPage />} />
       <Route path='/aboutus' element={<AboutusPage />} />
+      <Route path='/contact' element={<ContactPage />} />
     </Route>
   )
 )
