@@ -1,4 +1,13 @@
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react"
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+  Youtube,
+  MapPin,
+  Mail,
+  Phone,
+} from "lucide-react"
 
 const Footer = () => {
   return (
@@ -58,6 +67,22 @@ const Footer = () => {
               <button className='p-2 rounded-full bg-black'>
                 <Linkedin />
               </button>
+            </div>
+            <div className='flex pt-8 flex-col space-y-2 '>
+              <div className='inline-flex items-center gap-2'>
+                <MapPin className='h-5 w-5' />
+                <p className='w-full text-xl font-semibold  '>Head office</p>
+              </div>
+              <p className='text-sm font-medium'>
+                12th Main Rd, Indiranagar, Bengaluru, Karnataka 560008 IN
+              </p>
+              <hr />
+              <p className='w-full text-sm lg:text-base inline-flex items-center gap-2'>
+                <Phone className='lg:h-5 lg:w-5' /> +91-999-999-9999
+              </p>
+              <p className='w-full text-sm lg:text-base inline-flex items-center gap-2'>
+                <Mail className='lg:h-5 lg:w-5' /> contact@email.com
+              </p>
             </div>
           </div>
         </div>

@@ -2,3 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.home .slick-slide > div {
+  margin: 0 5px;
+}
+
+.support .slick-slide > div {
+  margin: 0 5px;
+}

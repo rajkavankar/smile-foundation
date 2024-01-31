@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import React from "react"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X } from "lucide-react"
 
 const menuItems = [
   {
@@ -13,7 +13,7 @@ const menuItems = [
   },
   {
     name: "Annual report",
-    href: "#",
+    href: "/annual-report",
   },
 ]
 
@@ -38,14 +38,11 @@ const HomeNav = () => {
           <ul className='ml-12 inline-flex space-x-8'>
             {menuItems.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className='inline-flex items-center text-lg font-semibold text-gray-800 hover:text-gray-900'>
                   {item.name}
-                  <span>
-                    <ChevronDown className='ml-2 h-4 w-4' />
-                  </span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -72,14 +69,16 @@ const HomeNav = () => {
               <div className='px-5 pb-6 pt-5'>
                 <div className='flex items-center justify-between'>
                   <div className='inline-flex items-center space-x-2'>
-                    <span>
-                      <img
-                        src='/images/logo.jpg'
-                        alt='logo'
-                        height={80}
-                        width={80}
-                      />
-                    </span>
+                    <Link to='/'>
+                      <span>
+                        <img
+                          src='/images/logo.jpg'
+                          alt='logo'
+                          height={80}
+                          width={80}
+                        />
+                      </span>
+                    </Link>
                   </div>
                   <div className='-mr-2 flex items-center'>
                     <button
@@ -99,17 +98,14 @@ const HomeNav = () => {
                 <div className='mt-6'>
                   <nav className='grid gap-y-4 '>
                     {menuItems.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className='-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50 justify-center'>
                         <span className='ml-3 text-base font-medium text-gray-900'>
                           {item.name}
                         </span>
-                        <span>
-                          <ChevronDown className='ml-3 h-4 w-4' />
-                        </span>
-                      </a>
+                      </Link>
                     ))}
                   </nav>
                 </div>
