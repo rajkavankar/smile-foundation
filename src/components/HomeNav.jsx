@@ -1,17 +1,18 @@
+import { Link } from "react-router-dom"
 import React from "react"
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 
 const menuItems = [
   {
-    name: "Home",
-    href: "#",
-  },
-  {
-    name: "About",
+    name: "About us",
     href: "#",
   },
   {
     name: "Contact",
+    href: "#",
+  },
+  {
+    name: "Annual report",
     href: "#",
   },
 ]
@@ -24,12 +25,14 @@ const HomeNav = () => {
   }
 
   return (
-    <div className='relative w-full bg-white'>
+    <div className='relative w-full bg-white shadow-md rounded-md'>
       <div className='mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8'>
         <div className='inline-flex items-center space-x-2'>
-          <span>
-            <img src='/images/logo.jpg' alt='logo' height={80} width={80} />
-          </span>
+          <Link to='/'>
+            <span>
+              <img src='/images/logo.jpg' alt='logo' height={80} width={80} />
+            </span>
+          </Link>
         </div>
         <div className='hidden lg:block'>
           <ul className='ml-12 inline-flex space-x-8'>
@@ -37,7 +40,7 @@ const HomeNav = () => {
               <li key={item.name}>
                 <a
                   href={item.href}
-                  className='inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900'>
+                  className='inline-flex items-center text-lg font-semibold text-gray-800 hover:text-gray-900'>
                   {item.name}
                   <span>
                     <ChevronDown className='ml-2 h-4 w-4' />
@@ -49,14 +52,11 @@ const HomeNav = () => {
         </div>
 
         <div className='ml-2 mt-2 hidden lg:block'>
-          <span className='relative inline-block'>
-            <img
-              className='h-10 w-10 rounded-full'
-              src='https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg'
-              alt='Dan_Abromov'
-            />
-            <span className='absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-600 ring-2 ring-white'></span>
-          </span>
+          <button
+            type='button'
+            className='rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-600/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 block focus-visible:outline-green-600 mr-2'>
+            Donate now
+          </button>
         </div>
         <div className='ml-2 lg:hidden flex items-center justify-center'>
           <button

@@ -1,9 +1,15 @@
-import HomePage from "./pages/HomePage"
+import Footer from "./components/Footer"
+import HomeNav from "./components/HomeNav"
+import { Outlet } from "react-router-dom"
 
 const App = () => {
   return (
     <div>
-      <HomePage />
+      <HomeNav />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
     </div>
   )
 }
