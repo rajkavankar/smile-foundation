@@ -34,7 +34,7 @@ const AboutusPage = () => {
         </p>
       </section>
 
-      <Cover className="bg-[url('./images/card-imgs/school.jpg')] h-[35vh] lg:h-[50vh]">
+      <Cover className="bg-[url('../images/card-imgs/school.jpg')] h-[35vh] lg:h-[50vh]">
         <h5 className='font-medium text-center'>OUR VISON</h5>
       </Cover>
 
@@ -69,7 +69,7 @@ const Cover = ({ className, children }) => {
   return (
     <div
       className={cn(
-        "bg-[url('./images/card-imgs/boys-water.jpg')] h-[80vh] lg:h-screen w-full bg-cover bg-center bg-no-repeat ",
+        "bg-[url('../images/card-imgs/boys-water.jpg')] h-[80vh] lg:h-screen w-full bg-cover bg-center bg-no-repeat ",
         className
       )}>
       <div className='w-full h-full flex justify-center items-center  backdrop-brightness-50 '>

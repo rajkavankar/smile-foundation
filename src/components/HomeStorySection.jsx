@@ -25,10 +25,10 @@ const HomeStorySection = () => {
           <MobileSlide />
         </div>
         <div>
-          <MobileSlide className="bg-[url('./images/card-imgs/boys-water.jpg')]" />
+          <MobileSlide className="bg-[url('../images/card-imgs/boys-water.jpg')]" />
         </div>
         <div>
-          <MobileSlide className="bg-[url('./images/card-imgs/girl-edu.jpg')]" />
+          <MobileSlide className="bg-[url('../images/card-imgs/girl-edu.jpg')]" />
         </div>
       </Slider>
     </section>
@@ -41,7 +41,7 @@ const MobileSlide = ({ className }) => {
   return (
     <div
       className={cn(
-        "bg-[url('./images/cardimg.jpg')] h-[25vh] lg:h-[35vh]  w-full bg-cover bg-center bg-no-repeat rounded-xl z-0 ",
+        "bg-[url('../images/cardimg.jpg')] h-[25vh] lg:h-[35vh]  w-full bg-cover bg-center bg-no-repeat rounded-xl z-0 ",
         className
       )}>
       <div className='w-full h-full flex justify-center items-center  backdrop-brightness-75 rounded-xl z-10'>
